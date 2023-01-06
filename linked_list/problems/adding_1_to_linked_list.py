@@ -20,3 +20,29 @@ class linked_list(Node):
         while new_address!=None:
             print(new_address.data)
             new_address=new_address.next
+    def adding_1(self):
+        self.new_address1=self.head
+        str1=""
+        while self.new_address1!=None:
+            str1=str1+str(self.new_address1.data)
+            self.new_address1=self.new_address1.next
+        print(int(str1)+1)
+    def reversing_adding_1(self):
+        self.new_address1=self.head
+        str1=""
+        while self.new_address1!=None:
+            str1=str1+str(self.new_address1.data)
+            self.new_address1=self.new_address1.next
+        print(int(str1[::-1])+1)
+    
+        
+obj=linked_list()
+obj.insert(1)
+obj.insert(9)
+obj.insert(9)
+obj.insert(9)
+obj.adding_1()
+obj.reversing_adding_1()
+
+
+
