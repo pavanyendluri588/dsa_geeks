@@ -1,5 +1,5 @@
-        class Linked_List_Node:
-        def __init__(self,address1=None,data1=None):
+class Linked_List_Node:
+    def __init__(self,address1=None,data1=None):
         self.data=data1
         self.address=address1
 class Linked_List(Linked_List_Node):
