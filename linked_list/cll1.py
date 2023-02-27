@@ -1,0 +1,12 @@
+import circular_linked_list as cll
+obj=cll.circular_LinkedList()
+obj.insert(1)
+obj.insert(10)
+obj.insert(1000)
+obj.insert(10000)
+obj.delete(10)
+obj.access()
+obj.delete(10)
+obj.access()
+obj.delete(10)
+obj.access()
