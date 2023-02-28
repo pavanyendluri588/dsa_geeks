@@ -7,17 +7,21 @@ class Node:
 class Tree:
     def create_node(self,data=None):
         return Node(data=data)
-    def insert1(self,node=None,data=None):
+    def insert(self,node=None,data=None):
         if node is None:
             return self.create_node(data=data)
-        if node.data > data:
-            node.left = self.insert(node.left,data)
-            print(node.left)
-        elif node.data< data:
-            node.right = self.insert(node.right,data)
-            print(node.right)
+        else:
+            if node.data == data:
+               return node
+            elif node.data < data:
+                node.right = self.insert(node.right,data)
+                print("node.right:",node.right)
+            else:
+                node.left = self.insert(node.left,data)
+                print("node.left:",node.left)
+            return node 
     #geeks
-    def insert(self,node, data):
+    def insert2(self,node, data):
         root=node
         key=data
         if root is None:
@@ -27,8 +31,25 @@ class Tree:
                 return root
             elif root.data < key:
                 root.right = self.insert(root.right, key)
+                print("root.right:",root.right)
             else:
                 root.left = self.insert(root.left, key)
+                print("root.left:",root.left)
+        return root
+    def insert1(self,node, data):
+        root=node
+        key=data
+        if root is None:
+            return Node(data=key)
+        
+        if root.data == key:
+            return root
+        elif root.data < key:
+            root.right = self.insert(root.right, key)
+            print("root.right:",root.right)
+        else:
+            root.left = self.insert(root.left, key)
+            print("root.left:",root.left)
         return root
         
     def left_insertion_s3(self,node=None):

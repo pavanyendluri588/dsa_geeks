@@ -11,8 +11,10 @@ class Tree:
             return self.create_node(data)
         if data<node.data:
             node.left = self.insert(node.left,data)
+            print("node.left:",node.left)
         else:
             node.right = self.insert(node.right,data)
+            print("node.right:",node.right)
 
 tree = Tree()
 root = tree.create_node(5)
