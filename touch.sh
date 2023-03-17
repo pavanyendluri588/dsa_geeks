@@ -1,10 +1,8 @@
 
 git init
-git remote add origin https://github.com/pavanyendluri588/dsa_geeks.git
-git remote -v  --force
+git remote add origin https://github.com/pavanyendluri588/deep_learning.git
 git add . --force
-git commit -m "prathice and improve"
-
-
-git push -f origin master
+git commit -m "april_2nd_upload"
+git branch -M master  --force
+git push -u origin master  --force
 
